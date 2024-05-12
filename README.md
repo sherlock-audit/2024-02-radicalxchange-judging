@@ -83,6 +83,24 @@ Manual Review
 
 Implement the require check from _cancelBid to _cancelAllBids.
 
+
+
+## Discussion
+
+**sherlock-admin3**
+
+The protocol team fixed this issue in the following PRs/commits:
+https://github.com/RadicalxChange/pco-art/pull/9
+
+
+**zzykxx**
+
+The highest bidder can't cancel his bid on an active auction round anymore while still being able to cancel his bids on previous rounds.
+
+**sherlock-admin2**
+
+The Lead Senior Watson signed off on the fix.
+
 # Issue M-1: Auction fails if the 'Honorarium Rate' is 0% 
 
 Source: https://github.com/sherlock-audit/2024-02-radicalxchange-judging/issues/31 
@@ -374,6 +392,20 @@ Escalations have been resolved successfully!
 Escalation status:
 - [cawfree](https://github.com/sherlock-audit/2024-02-radicalxchange-judging/issues/31/#issuecomment-2025282881): accepted
 
+**sherlock-admin3**
+
+The protocol team fixed this issue in the following PRs/commits:
+https://github.com/RadicalxChange/pco-art/pull/10
+
+
+**zzykxx**
+
+The issue has been fixed as recommended. Plus, if `feeDenominator` is `0` the returned fee is now `0`.
+
+**sherlock-admin2**
+
+The Lead Senior Watson signed off on the fix.
+
 # Issue M-2: Currently auctioned NFTs can be transferred to a different address in a specific edge case 
 
 Source: https://github.com/sherlock-audit/2024-02-radicalxchange-judging/issues/33 
@@ -500,4 +532,18 @@ Escalations have been resolved successfully!
 
 Escalation status:
 - [zzykxx](https://github.com/sherlock-audit/2024-02-radicalxchange-judging/issues/33/#issuecomment-2028592239): accepted
+
+**sherlock-admin2**
+
+The protocol team fixed this issue in the following PRs/commits:
+https://github.com/RadicalxChange/pco-art/pull/11
+
+
+**zzykxx**
+
+The issue has been fixed by preventing the auction start time of a newly added NFT to be in the past.
+
+**sherlock-admin2**
+
+The Lead Senior Watson signed off on the fix.
 
